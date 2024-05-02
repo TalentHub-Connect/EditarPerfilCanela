@@ -21,6 +21,17 @@ public class CanelaUserController {
         return ResponseEntity.ok(canelaUserService.findAllUsers());
     }
 
+    @GetMapping("/{id}")
+public ResponseEntity<CanelaUser> getPlanById(@PathVariable Long id) {
+    CanelaUser canelaUser = canelaUserService.findPlanById(id);
+    if (canelaUser != null) {
+        return ResponseEntity.ok(canelaUser);
+    } else {
+        return ResponseEntity.notFound().build();
+    }
+}
+
+
     @PostMapping
     public ResponseEntity<CanelaUser> createUser(@RequestBody CanelaUser user) {
         return ResponseEntity.status(201).body(canelaUserService.saveUser(user));

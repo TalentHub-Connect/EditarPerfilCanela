@@ -18,7 +18,10 @@ public class CanelaUserService {
     public List<CanelaUser> findAllUsers() {
         return caneiaUserRepository.findAll();
     }
-
+    public CanelaUser findPlanById(Long id) {
+        return caneiaUserRepository.findById(id).orElse(null);
+    }
+    
     public CanelaUser saveUser(CanelaUser user) {
         return caneiaUserRepository.save(user);
     }
