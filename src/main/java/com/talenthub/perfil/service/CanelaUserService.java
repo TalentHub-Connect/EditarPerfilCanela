@@ -40,6 +40,7 @@ public class CanelaUserService {
                 user.setEmergencyContactName(userDetails.getEmergencyContactName());
                 user.setEmergencyContact(userDetails.getEmergencyContact());
                 user.setPositionId(userDetails.getPositionId());
+                user.setUser_id(userDetails.getUser_id());
                 return caneiaUserRepository.save(user);
             })
             .orElseGet(() -> {
