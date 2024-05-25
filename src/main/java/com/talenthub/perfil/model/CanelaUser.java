@@ -19,11 +19,19 @@ public class CanelaUser {
     private String status;
     private Integer positionId; 
     private Integer user_id;
+//    private String id_keycloak;
+//    public String getId_keycloak() {
+//        return id_keycloak;
+//    }
+//
+//    public void setId_keycloak(String id_keycloak) {
+//        this.id_keycloak = id_keycloak;
+//    }
 
     public Integer getUser_id() {
         return user_id;
     }
-
+    
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
