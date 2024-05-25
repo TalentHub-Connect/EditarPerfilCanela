@@ -19,7 +19,7 @@ public class CanelaUser {
     private String status;
     private Integer positionId; 
     private Integer user_id;
-    
+
     public Integer getUser_id() {
         return user_id;
     }
