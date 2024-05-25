@@ -15,10 +15,11 @@ public class CanelaUser {
     private String numberPhone;  
     private String address;
     private String emergencyContactName;
-    private Integer emergencyContact;
-    private Boolean status;
+    private Integer emergencyContactNumber;
+    private String status;
     private Integer positionId; 
     private Integer user_id;
+    
     public Integer getUser_id() {
         return user_id;
     }
@@ -100,12 +101,12 @@ public class CanelaUser {
         this.emergencyContactName = emergencyContactName;
     }
 
-    public Integer getEmergencyContact() {
-        return emergencyContact;
+    public Integer getEmergencyContactNumber() {
+        return emergencyContactNumber;
     }
 
-    public void setEmergencyContact(Integer emergencyContact) {
-        this.emergencyContact = emergencyContact;
+    public void setEmergencyContactNumber(Integer emergencyContact) {
+        this.emergencyContactNumber = emergencyContact;
     }
 
     public Integer getPositionId() {
@@ -116,11 +117,11 @@ public class CanelaUser {
         this.positionId = positionId;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }

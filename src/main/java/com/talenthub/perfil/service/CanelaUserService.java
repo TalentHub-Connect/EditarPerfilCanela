@@ -46,7 +46,7 @@ public class CanelaUserService {
                 user.setNumberPhone(userDetails.getNumberPhone());
                 user.setAddress(userDetails.getAddress());
                 user.setEmergencyContactName(userDetails.getEmergencyContactName());
-                user.setEmergencyContact(userDetails.getEmergencyContact());
+                user.setEmergencyContactNumber(userDetails.getEmergencyContactNumber());
                 user.setPositionId(userDetails.getPositionId());
                 user.setUser_id(userDetails.getUser_id());
                 return canelaUserRepository.save(user);
