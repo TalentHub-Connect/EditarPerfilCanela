@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CanelaUserRepository extends JpaRepository<CanelaUser, Long> {
 
-    CanelaUser findByUsername(String username);
+//    CanelaUser findByUsername(String username);
 
 }

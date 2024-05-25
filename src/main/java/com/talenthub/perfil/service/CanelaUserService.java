@@ -19,13 +19,13 @@ public class CanelaUserService {
         return canelaUserRepository.findAll();
     }
 
-    public CanelaUser findPlanById(Long id) {
-        return canelaUserRepository.findById(id).orElse(null);
-    }
+//    public CanelaUser findPlanById(Long id) {
+//        return canelaUserRepository.findById(id).orElse(null);
+//    }
 
-    public CanelaUser findUserByUsername(String username) {
-        return canelaUserRepository.findByUsername(username);
-    }
+//    public CanelaUser findUserByUsername(String username) {
+//        return canelaUserRepository.findByUsername(username);
+//    }
     
     public CanelaUser saveUser(CanelaUser user) {
         return canelaUserRepository.save(user);

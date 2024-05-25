@@ -21,20 +21,20 @@ public class CanelaUserController {
         return ResponseEntity.ok(canelaUserService.findAllUsers());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<CanelaUser> getPlanById(@PathVariable Long id) {
-        CanelaUser canelaUser = canelaUserService.findPlanById(id);
-        if (canelaUser != null) {
-            return ResponseEntity.ok(canelaUser);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
+//    @GetMapping("/{id}")
+//    public ResponseEntity<CanelaUser> getPlanById(@PathVariable Long id) {
+//        CanelaUser canelaUser = canelaUserService.findPlanById(id);
+//        if (canelaUser != null) {
+//            return ResponseEntity.ok(canelaUser);
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
 
-    @GetMapping("/{username}")
-    public CanelaUser getUserByUsername(@PathVariable String username) {
-        return canelaUserService.findUserByUsername(username);
-    }
+//    @GetMapping("/{username}")
+//    public CanelaUser getUserByUsername(@PathVariable String username) {
+//        return canelaUserService.findUserByUsername(username);
+//    }
 
 
     @PostMapping
