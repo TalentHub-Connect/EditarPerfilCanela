@@ -22,14 +22,19 @@ public class CanelaUserController {
     }
 
     @GetMapping("/{id}")
-public ResponseEntity<CanelaUser> getPlanById(@PathVariable Long id) {
-    CanelaUser canelaUser = canelaUserService.findPlanById(id);
-    if (canelaUser != null) {
-        return ResponseEntity.ok(canelaUser);
-    } else {
-        return ResponseEntity.notFound().build();
+    public ResponseEntity<CanelaUser> getPlanById(@PathVariable Long id) {
+        CanelaUser canelaUser = canelaUserService.findPlanById(id);
+        if (canelaUser != null) {
+            return ResponseEntity.ok(canelaUser);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
-}
+
+    @GetMapping("/{username}")
+    public CanelaUser getUserByUsername(@PathVariable String username) {
+        return canelaUserService.findUserByUsername(username);
+    }
 
 
     @PostMapping

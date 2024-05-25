@@ -13,25 +13,30 @@ import java.util.Optional;
 public class CanelaUserService {
 
     @Autowired
-    private CanelaUserRepository caneiaUserRepository;
+    private CanelaUserRepository canelaUserRepository;
 
     public List<CanelaUser> findAllUsers() {
-        return caneiaUserRepository.findAll();
+        return canelaUserRepository.findAll();
     }
+
     public CanelaUser findPlanById(Long id) {
-        return caneiaUserRepository.findById(id).orElse(null);
+        return canelaUserRepository.findById(id).orElse(null);
+    }
+
+    public CanelaUser findUserByUsername(String username) {
+        return canelaUserRepository.findByUsername(username);
     }
     
     public CanelaUser saveUser(CanelaUser user) {
-        return caneiaUserRepository.save(user);
+        return canelaUserRepository.save(user);
     }
 
     public Optional<CanelaUser> findUserById(Long id) {
-        return caneiaUserRepository.findById(id);
+        return canelaUserRepository.findById(id);
     }
 
     public CanelaUser updateUser(Long id, CanelaUser userDetails) {
-        return caneiaUserRepository.findById(id)
+        return canelaUserRepository.findById(id)
             .map(user -> {
                 user.setIdentification(userDetails.getIdentification());
                 user.setEmail(userDetails.getEmail());
@@ -44,15 +49,15 @@ public class CanelaUserService {
                 user.setEmergencyContact(userDetails.getEmergencyContact());
                 user.setPositionId(userDetails.getPositionId());
                 user.setUser_id(userDetails.getUser_id());
-                return caneiaUserRepository.save(user);
+                return canelaUserRepository.save(user);
             })
             .orElseGet(() -> {
                 userDetails.setId(id);
-                return caneiaUserRepository.save(userDetails);
+                return canelaUserRepository.save(userDetails);
             });
     }
 
     public void deleteUser(Long id) {
-        caneiaUserRepository.deleteById(id);
+        canelaUserRepository.deleteById(id);
     }
 }
